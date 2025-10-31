@@ -18,6 +18,11 @@ let paresEncontrados = 0;
 const tabuleiroEl = document.getElementById("tabuleiro");
 const placarEl = document.getElementById("placar");
 const reiniciarBtn = document.getElementById("reiniciar");
+const tentativasValorEl = document.getElementById("tentativas-valor"); // "Tentativas Restantes: X"
+const botaoDica = document.getElementById("btn-dica"); // botão Pedir Dica
+const botaoTema = document.getElementById("btn-tema"); // botão alternar tema
+const textoBotao = document.getElementById("texto-botao"); // span dentro do botão de tema
+
 
 function embaralhar(deck) {
   return deck.sort(() => Math.random() - 0.5);
