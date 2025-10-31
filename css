@@ -5,13 +5,30 @@
 }
 
 body {
-  background-image: url("https://th.bing.com/th/id/OIP.O-VQowzZFsCnCLrbD0c90wAAAA?pid=ImgDet&rs=1");
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.aculBu3o5hndrcLl2oF-gQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   min-height: 100vh;
+  background-color: #000;
+  color: #f0f0f0;
+
+  transition: background-image 0.4s ease,
+              background-color .3s ease,
+              color .3s ease;
+  padding: 20px;
 }
 
+body.santo-berco-mode {
+  background-image: url("https://blog.jamboeditora.com.br/wp-content/uploads/2023/05/ordem-paranormal-criar-seu-santo-berco-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
 #tabuleiro {
   display: grid;
   grid-template-columns: repeat(4, var(--card-size));
