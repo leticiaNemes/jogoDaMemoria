@@ -29,6 +29,22 @@ body.santo-berco-mode {
   background-color: #0a0a0a;
   color: #ffffff;
 }
+/* deixar botões visíveis nesse tema alternativo */
+body.santo-berco-mode .btn-outline-black {
+  color: #fff;
+  border-color: #fff;
+}
+body.santo-berco-mode .btn-outline-black:hover {
+  color: #ff0000;
+  border-color: #ff0000;
+  background-color: transparent;
+}
+
+.titulo-jogo {
+  color: red;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
 #tabuleiro {
   display: grid;
   grid-template-columns: repeat(4, var(--card-size));
