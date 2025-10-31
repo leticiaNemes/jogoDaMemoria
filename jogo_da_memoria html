@@ -51,6 +51,12 @@
 
     <div class="text-center mt-4">
       <button id="reiniciar" class="btn btn-outline-light btn-lg">Reiniciar</button>
+
+//botão dica
+      <button id="btn-dica" class="btn btn-outline-black btn-lg">
+        Pedir Dica
+      </button>
+
     </div>
   </div>
 
