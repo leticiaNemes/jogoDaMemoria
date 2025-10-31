@@ -13,7 +13,25 @@
   
   <link rel="stylesheet" href="kk.css">
 </head>
-<body class="bg-dark text-light">  
+<body>  
+
+//dark mode modificado para mudar imagem
+  <button id="btn-tema" class="botao-tema" aria-label="Alternar tema visual">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         fill="currentColor">
+      <path d="M4 5a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4zm16 12H4V7h16v10z"/>
+      <circle cx="8" cy="10" r="2" />
+      <path d="M6 16l3.5-4.5 2.5 3 2-2L18 16H6z"/>
+    </svg>
+
+    
+    <span id="texto-botao" class="texto-botao">
+      ir para santo berço
+    </span>
+  </button>
+
+
   <div class="container py-4">
     <h1 class="text-center" style="color: red;-webkit-text-stroke: 1px rgb(0, 0, 0);">Jogo da Memória</h1>
     <h2 class="text-center mb-3" style="color: red;-webkit-text-stroke: 1px rgb(0, 0, 0);">Ordem Paranormal</h2>
