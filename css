@@ -1,0 +1,84 @@
+
+:root {
+  --card-size: 150px;
+  --gap: 15px;
+}
+
+body {
+  background-image: url("https://th.bing.com/th/id/OIP.O-VQowzZFsCnCLrbD0c90wAAAA?pid=ImgDet&rs=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(4, var(--card-size));
+  grid-auto-rows: var(--card-size);
+  gap: var(--gap);
+  justify-content: center;
+  user-select: none;
+}
+.carta {
+  position: relative;
+  width: var(--card-size);
+  height: var(--card-size);
+  cursor: pointer;
+  perspective: 900px;
+  outline: none;
+
+}
+
+.carta:focus-visible {
+  box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+  border-radius: 12px;
+}
+
+
+.carta-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .35s ease;
+}
+
+.carta.virada .carta-inner {
+  transform: rotateY(180deg);
+}
+
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.face.verso {
+ background-color: #fff;
+  color: #fff;
+  background-image: url("https://cdn.picrew.me/app/image_maker/2251695/icon_RbbQfgmWTp0gE5B3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 95%;
+
+}
+
+.face.frente {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  transform: rotateY(180deg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+#reiniciar {
+  min-width: 200px;
+}
