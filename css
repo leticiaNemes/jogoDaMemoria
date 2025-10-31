@@ -1,9 +1,11 @@
-
 :root {
   --card-size: 150px;
   --gap: 15px;
 }
 
+/* ============================
+   ESTADO NORMAL DO TEMA
+   ============================ */
 body {
   background-image: url("https://tse1.mm.bing.net/th/id/OIP.aculBu3o5hndrcLl2oF-gQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3");
   background-size: cover;
@@ -20,6 +22,7 @@ body {
   padding: 20px;
 }
 
+
 body.santo-berco-mode {
   background-image: url("https://blog.jamboeditora.com.br/wp-content/uploads/2023/05/ordem-paranormal-criar-seu-santo-berco-scaled.jpg");
   background-size: cover;
@@ -29,6 +32,7 @@ body.santo-berco-mode {
   background-color: #0a0a0a;
   color: #ffffff;
 }
+
 /* deixar botões visíveis nesse tema alternativo */
 body.santo-berco-mode .btn-outline-black {
   color: #fff;
@@ -53,6 +57,7 @@ body.santo-berco-mode .btn-outline-black:hover {
   justify-content: center;
   user-select: none;
 }
+
 .carta {
   position: relative;
   width: var(--card-size);
@@ -60,14 +65,12 @@ body.santo-berco-mode .btn-outline-black:hover {
   cursor: pointer;
   perspective: 900px;
   outline: none;
-
 }
 
 .carta:focus-visible {
   box-shadow: 0 0 0 4px rgba(255,255,255,.5);
   border-radius: 12px;
 }
-
 
 .carta-inner {
   position: relative;
@@ -81,7 +84,6 @@ body.santo-berco-mode .btn-outline-black:hover {
   transform: rotateY(180deg);
 }
 
-
 .face {
   position: absolute;
   inset: 0;
@@ -94,13 +96,12 @@ body.santo-berco-mode .btn-outline-black:hover {
 }
 
 .face.verso {
- background-color: #fff;
+  background-color: #fff;
   color: #fff;
   background-image: url("https://cdn.picrew.me/app/image_maker/2251695/icon_RbbQfgmWTp0gE5B3.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 95%;
-
 }
 
 .face.frente {
@@ -114,4 +115,60 @@ body.santo-berco-mode .btn-outline-black:hover {
 
 #reiniciar {
   min-width: 200px;
+}
+
+/* Botão flutuante no canto superior esquerdo */
+.botao-tema {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all .2s;
+  white-space: nowrap; /* não quebrar o texto */
+}
+
+.botao-tema:hover {
+  background-color: #444;
+  border-color: #777;
+}
+
+.botao-tema svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* estilo personalizado para Reiniciar e Dica */
+.btn-outline-black {
+  color: #c5c5c5;
+  border: 2px solid #c5c5c5;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-black:hover {
+  color: #ff0000;
+  border-color: #ff0000;
+  background-color: transparent;
+}
+
+#tentativas-restantes {
+  color: #ffffff !important;
+}
+
+#tentativas-restantes #tentativas-valor {
+  color: #ffffff !important;
 }
