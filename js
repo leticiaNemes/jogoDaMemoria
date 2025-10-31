@@ -26,7 +26,7 @@ let limiteTentativas = 20; // começa com 20 chances
 const tabuleiroEl = document.getElementById("tabuleiro");
 const placarEl = document.getElementById("placar");
 const reiniciarBtn = document.getElementById("reiniciar");
-const tentativasValorEl = document.getElementById("tentativas-valor"); // "Tentativas Restantes: X"
+const tentativasValorEl = document.getElementById("tentativas-valor"); 
 const botaoDica = document.getElementById("btn-dica"); // botão Pedir Dica
 const botaoTema = document.getElementById("btn-tema"); // botão alternar tema
 const textoBotao = document.getElementById("texto-botao"); // span dentro do botão de tema
@@ -93,7 +93,6 @@ function atualizarPlacar(msg) {
   // "Tentativas: X" (se não mandou msg customizada)
   placarEl.textContent = msg ?? `Tentativas: ${tentativas}`;
 
-  // "Tentativas Restantes: Y"
   tentativasValorEl.textContent = limiteTentativas;
 }
 
@@ -223,7 +222,7 @@ botaoTema.addEventListener("click", () => {
 
   // atualiza texto do botão conforme o modo atual
   if (document.body.classList.contains("santo-berco-mode")) {
-    textoBotao.textContent = "voltar de santo berço";
+    textoBotao.textContent = "voltar para carpazinha";
   } else {
     textoBotao.textContent = "ir para santo berço";
   }
