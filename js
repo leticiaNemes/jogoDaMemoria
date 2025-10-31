@@ -15,6 +15,9 @@ let tentativas = 0;
 let bloquearTabuleiro = false;
 let paresEncontrados = 0;
 
+//limite de tentativas
+let limiteTentativas = 20; 
+
 const tabuleiroEl = document.getElementById("tabuleiro");
 const placarEl = document.getElementById("placar");
 const reiniciarBtn = document.getElementById("reiniciar");
@@ -75,6 +78,27 @@ function criarTabuleiro() {
 
 function atualizarPlacar(msg) {
   placarEl.textContent = msg ?? `Tentativas: ${tentativas}`;
+// "Tentativas Restantes: 
+  tentativasValorEl.textContent = limiteTentativas;
+}
+
+// trava tudo quando game over
+function encerrarJogo() {
+  bloquearTabuleiro = true;
+  const cartasDom = document.querySelectorAll(".carta");
+  cartasDom.forEach(c => {
+    c.replaceWith(c.cloneNode(true)); // remove eventos
+  });
+}
+
+// checa se perdeu
+function checarGameOver() {
+  if (limiteTentativas <= 0) {
+    atualizarPlacar("GAME OVER");
+    alert("GAME OVER");
+    encerrarJogo();
+  }
+}
 }
 
 function virarCarta(e) {
